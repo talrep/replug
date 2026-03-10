@@ -1537,7 +1537,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   padding-bottom: 96px;
-  min-height: 340px;
+  min-height: 420px;
 }
 
 .rp-page-hero--with-bg::before {
@@ -1848,7 +1848,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .rp-page-hero--with-bg {
-    min-height: 220px;
+    min-height: 520px;
   }
 
   .rp-footer__grid {
