@@ -153,7 +153,7 @@
 
   <script>
     document.querySelectorAll('.rp-faq__question').forEach(function(btn){btn.addEventListener('click',function(){var item=this.closest('.rp-faq__item'),isOpen=item.classList.contains('is-open');document.querySelectorAll('.rp-faq__item.is-open').forEach(function(el){el.classList.remove('is-open');});if(!isOpen)item.classList.add('is-open');});});
-    var b=document.querySelector('.rp-header__burger'),m=document.querySelector('.rp-mobile-nav');if(b&&m)b.addEventListener('click',function(){m.classList.toggle('is-open');});
+    document.querySelector('.rp-header__burger').addEventListener('click',function(){document.querySelector('.rp-header').classList.toggle('rp-header--open');});
   </script>
 </body>
 </html>

@@ -111,8 +111,7 @@
   </footer>
 
   <script>
-    var burger=document.querySelector('.rp-header__burger'),mn=document.querySelector('.rp-mobile-nav');
-    if(burger&&mn)burger.addEventListener('click',function(){mn.classList.toggle('is-open');burger.setAttribute('aria-expanded',mn.classList.contains('is-open'));});
+    document.querySelector('.rp-header__burger').addEventListener('click',function(){document.querySelector('.rp-header').classList.toggle('rp-header--open');});
   </script>
 </body>
 </html>

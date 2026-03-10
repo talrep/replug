@@ -235,16 +235,7 @@
 
   <script>
     /* Mobile Navigation */
-    (function() {
-      var burger = document.querySelector('.rp-header__burger');
-      var mobileNav = document.querySelector('.rp-mobile-nav');
-      if (burger && mobileNav) {
-        burger.addEventListener('click', function() {
-          mobileNav.classList.toggle('is-open');
-          burger.setAttribute('aria-expanded', mobileNav.classList.contains('is-open'));
-        });
-      }
-    })();
+    document.querySelector('.rp-header__burger').addEventListener('click',function(){document.querySelector('.rp-header').classList.toggle('rp-header--open');});
 
     /* Cookie Consent */
     function rpAcceptCookies() {
