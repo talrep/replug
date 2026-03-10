@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trouver un réparateur — Re-plug</title>
+  <meta name="description" content="Trouvez un réparateur Re-plug agréé près de chez vous. Réseau de partenaires certifiés pour la réparation et le reconditionnement de batteries lithium-ion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/replug.css">
+</head>
+<body>
+  <a class="rp-sr-only" href="#main-content">Aller au contenu principal</a>
+
+  <header class="rp-header" role="banner">
+    <div class="rp-header__inner">
+      <a href="../index.html" class="rp-header__logo"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img"></a>
+      <nav class="rp-header__nav">
+        <a href="qui-sommes-nous.html" class="rp-header__nav-link">Qui sommes-nous</a>
+        <a href="notre-expertise.html" class="rp-header__nav-link">Notre expertise</a>
+        <a href="ressources.html" class="rp-header__nav-link">Ressources</a>
+        <a href="blog.html" class="rp-header__nav-link">Blog</a>
+        <a href="contact.html" class="rp-header__nav-link">Contact</a>
+      </nav>
+      <div class="rp-header__actions">
+        <a href="espace-partenaire.html" class="rp-header__partner-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Espace Partenaires</span></a>
+        <a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__cta">Trouver un réparateur</a>
+      </div>
+      <button class="rp-header__burger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="rp-page-hero rp-page-hero--with-bg" style="background-image:url('../images/photo-5.avif');">
+      <div class="rp-page-hero__inner">
+        <h1 class="rp-page-hero__title">Trouver un réparateur près de chez vous</h1>
+        <p class="rp-page-hero__subtitle">Notre réseau de partenaires agréés vous accueille partout en France pour diagnostiquer, réparer ou reconditionner votre batterie.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEARCH + MAP ===== -->
+    <section class="rp-locator">
+      <div class="rp-locator__inner rp-container">
+
+        <!-- Search Bar -->
+        <div class="rp-locator__search">
+          <div class="rp-locator__search-bar">
+            <svg class="rp-locator__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" class="rp-locator__search-input" placeholder="Entrez votre ville ou code postal…" aria-label="Rechercher un réparateur">
+            <button class="rp-btn rp-btn--primary rp-locator__search-btn">Rechercher</button>
+          </div>
+          <div class="rp-locator__filters">
+            <button class="rp-locator__filter-tag rp-locator__filter-tag--active">Tous</button>
+            <button class="rp-locator__filter-tag">Diagnostic</button>
+            <button class="rp-locator__filter-tag">Collecte</button>
+            <button class="rp-locator__filter-tag">Point relais</button>
+            <button class="rp-locator__filter-tag">Réparation</button>
+          </div>
+        </div>
+
+        <!-- Map + List Layout -->
+        <div class="rp-locator__layout">
+
+          <!-- Map Placeholder -->
+          <div class="rp-locator__map">
+            <div class="rp-locator__map-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p>Carte interactive</p>
+              <p class="rp-locator__map-note">Intégration Mapbox — ajoutez votre token dans le Customizer Shopify</p>
+            </div>
+          </div>
+
+          <!-- Partner List -->
+          <div class="rp-locator__list">
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">Vélo Station Lyon</h3>
+                <span class="rp-locator__card-distance">2,3 km</span>
+              </div>
+              <p class="rp-locator__card-address">12, rue de la République — 69002 Lyon</p>
+              <p class="rp-locator__card-phone">04 72 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Collecte</span>
+                <span class="rp-locator__tag">Diagnostic</span>
+                <span class="rp-locator__tag">Point relais</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">Mob'Elec Paris</h3>
+                <span class="rp-locator__card-distance">5,1 km</span>
+              </div>
+              <p class="rp-locator__card-address">87, boulevard Voltaire — 75011 Paris</p>
+              <p class="rp-locator__card-phone">01 43 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Collecte</span>
+                <span class="rp-locator__tag">Diagnostic</span>
+                <span class="rp-locator__tag">Réparation</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">Green Ride Nantes</h3>
+                <span class="rp-locator__card-distance">8,7 km</span>
+              </div>
+              <p class="rp-locator__card-address">5, quai de la Fosse — 44000 Nantes</p>
+              <p class="rp-locator__card-phone">02 40 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Diagnostic</span>
+                <span class="rp-locator__tag">Point relais</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">Cycle Expert Bordeaux</h3>
+                <span class="rp-locator__card-distance">12,4 km</span>
+              </div>
+              <p class="rp-locator__card-address">22, cours de l'Intendance — 33000 Bordeaux</p>
+              <p class="rp-locator__card-phone">05 56 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Collecte</span>
+                <span class="rp-locator__tag">Diagnostic</span>
+                <span class="rp-locator__tag">Réparation</span>
+                <span class="rp-locator__tag">Point relais</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">E-Motion Marseille</h3>
+                <span class="rp-locator__card-distance">15,2 km</span>
+              </div>
+              <p class="rp-locator__card-address">45, avenue du Prado — 13008 Marseille</p>
+              <p class="rp-locator__card-phone">04 91 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Diagnostic</span>
+                <span class="rp-locator__tag">Réparation</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+            <article class="rp-locator__card">
+              <div class="rp-locator__card-header">
+                <h3 class="rp-locator__card-name">Volt'Air Toulouse</h3>
+                <span class="rp-locator__card-distance">18,6 km</span>
+              </div>
+              <p class="rp-locator__card-address">10, place du Capitole — 31000 Toulouse</p>
+              <p class="rp-locator__card-phone">05 61 00 00 00</p>
+              <div class="rp-locator__card-tags">
+                <span class="rp-locator__tag">Collecte</span>
+                <span class="rp-locator__tag">Point relais</span>
+              </div>
+              <div class="rp-locator__card-actions">
+                <a href="#" class="rp-btn rp-btn--primary rp-btn--small">Itinéraire</a>
+                <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small">Contacter</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REASSURANCE ===== -->
+    <section class="rp-reassurance">
+      <div class="rp-reassurance__inner rp-container">
+        <div class="rp-reassurance__grid">
+          <div class="rp-reassurance__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            <h3>Partenaires certifiés</h3>
+            <p>Chaque réparateur est formé et agréé par Re-plug selon nos protocoles industriels.</p>
+          </div>
+          <div class="rp-reassurance__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <h3>Devis sous 48h</h3>
+            <p>Pré-diagnostic en magasin et devis détaillé en moins de 48 heures.</p>
+          </div>
+          <div class="rp-reassurance__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <h3>Garantie 24 mois</h3>
+            <p>Toute intervention est couverte par notre garantie contractuelle de 2 ans, SAV inclus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA PARTENAIRE ===== -->
+    <section class="rp-partner-cta">
+      <div class="rp-partner-cta__inner rp-container">
+        <h2 class="rp-partner-cta__title">Vous êtes réparateur ? <em>Rejoignez le réseau</em></h2>
+        <p class="rp-partner-cta__text">Devenez partenaire Re-plug et proposez un service de réparation de batteries certifié à vos clients.</p>
+        <a href="contact.html" class="rp-btn rp-btn--primary">Devenir partenaire</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rp-footer" role="contentinfo"><div class="rp-footer__inner"><div class="rp-footer__grid"><div class="rp-footer__brand"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-footer__logo-img"><p class="rp-footer__brand-text">Re-plug prolonge la vie des batteries. Réparation, reconditionnement et maintenance de batteries lithium-ion pour la mobilité électrique.</p></div><div><p class="rp-footer__col-title">Navigation</p><ul class="rp-footer__links"><li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li><li><a href="notre-expertise.html">Notre expertise</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><p class="rp-footer__col-title">Services</p><ul class="rp-footer__links"><li><a href="trouver-un-reparateur.html">Trouver un réparateur</a></li><li><a href="contact.html">Devenir partenaire</a></li><li><a href="espace-partenaire.html">Espace partenaires</a></li></ul></div><div><p class="rp-footer__col-title">Contact</p><ul class="rp-footer__links"><li>Re-plug SAS</li><li>8, rue Lemercier, 75017 Paris</li><li><a href="mailto:admin@re-plug.fr">admin@re-plug.fr</a></li></ul></div></div><div class="rp-footer__bottom"><p class="rp-footer__copy">&copy; 2026 Re-plug SAS. Tous droits réservés.</p><ul class="rp-footer__legal-links"><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv-professionnels.html">CGV</a></li><li><a href="politique-de-confidentialite.html">Confidentialité</a></li><li><a href="politique-de-cookies.html">Cookies</a></li><li><a href="politique-de-garantie.html">Garantie</a></li><li><a href="politique-de-livraison.html">Livraison et retour</a></li></ul></div></div></footer>
+
+  <script>
+    // Mobile nav
+    var b=document.querySelector('.rp-header__burger'),m=document.querySelector('.rp-mobile-nav');
+    if(b&&m) b.addEventListener('click',function(){m.classList.toggle('is-open');});
+
+    (function(){
+      var searchInput = document.querySelector('.rp-locator__search-input');
+      var searchBtn   = document.querySelector('.rp-locator__search-btn');
+      var filterTags  = document.querySelectorAll('.rp-locator__filter-tag');
+      var cards       = document.querySelectorAll('.rp-locator__card');
+      var listEl      = document.querySelector('.rp-locator__list');
+
+      // Create "no results" message
+      var noResults = document.createElement('div');
+      noResults.className = 'rp-locator__no-results';
+      noResults.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg><p>Aucun réparateur trouvé pour cette recherche.</p><p style="font-size:.875rem;color:#6b7280;margin-top:.25rem;">Essayez un autre terme ou supprimez les filtres.</p>';
+      noResults.style.display = 'none';
+      noResults.style.textAlign = 'center';
+      noResults.style.padding = '2rem 1rem';
+      noResults.style.color = '#374151';
+      listEl.appendChild(noResults);
+
+      var activeFilter = 'Tous';
+
+      // Normalize text for matching (remove accents, lowercase)
+      function norm(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+      }
+
+      function runFilter() {
+        var query = norm(searchInput.value);
+        var visibleCount = 0;
+
+        cards.forEach(function(card) {
+          var name    = norm(card.querySelector('.rp-locator__card-name').textContent);
+          var address = norm(card.querySelector('.rp-locator__card-address').textContent);
+          var tags    = Array.from(card.querySelectorAll('.rp-locator__tag')).map(function(t){ return t.textContent; });
+
+          // Text match (city, name, address, postal code)
+          var matchesText = !query || name.indexOf(query) !== -1 || address.indexOf(query) !== -1;
+
+          // Filter tag match
+          var matchesTag = activeFilter === 'Tous' || tags.indexOf(activeFilter) !== -1;
+
+          if (matchesText && matchesTag) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      // Search button click
+      searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        runFilter();
+      });
+
+      // Search on Enter key
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          runFilter();
+        }
+      });
+
+      // Live search as user types (debounced)
+      var debounceTimer;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(runFilter, 300);
+      });
+
+      // Filter tags click
+      filterTags.forEach(function(tag) {
+        tag.addEventListener('click', function() {
+          filterTags.forEach(function(t){ t.classList.remove('rp-locator__filter-tag--active'); });
+          this.classList.add('rp-locator__filter-tag--active');
+          activeFilter = this.textContent.trim();
+          runFilter();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Espace Partenaires — Re-plug</title>
+  <meta name="description" content="Accédez à votre espace partenaire Re-plug. Gestion des commandes, suivi des réparations et outils de diagnostic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/replug.css">
+</head>
+<body class="template-partner-login">
+
+  <a class="rp-sr-only" href="#main-content">Aller au contenu principal</a>
+
+  <!-- HEADER -->
+  <header class="rp-header" role="banner">
+    <div class="rp-header__inner">
+      <a href="../index.html" class="rp-header__logo" aria-label="Re-plug — Accueil">
+        <img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img">
+      </a>
+      <nav class="rp-header__nav" aria-label="Navigation principale">
+        <a href="qui-sommes-nous.html" class="rp-header__nav-link">Qui sommes-nous</a>
+        <a href="notre-expertise.html" class="rp-header__nav-link">Notre expertise</a>
+        <a href="ressources.html" class="rp-header__nav-link">Ressources</a>
+        <a href="blog.html" class="rp-header__nav-link">Blog</a>
+        <a href="contact.html" class="rp-header__nav-link">Contact</a>
+      </nav>
+      <div class="rp-header__actions">
+        <a href="espace-partenaire.html" class="rp-header__partner-link" aria-label="Espace Partenaires">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Espace Partenaires</span>
+        </a>
+        <a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__cta">Trouver un réparateur</a>
+      </div>
+      <button class="rp-header__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content" role="main">
+    <section class="rp-partner-login">
+      <div class="rp-partner-login__inner">
+
+        <!-- Icon -->
+        <div style="width:72px;height:72px;margin:0 auto 24px;background-color:var(--rp-offwhite);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rp-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+
+        <h1 class="rp-partner-login__title">Espace Partenaires</h1>
+        <p class="rp-partner-login__subtitle">Connectez-vous pour accéder à vos outils de diagnostic, vos commandes en cours et le suivi de vos réparations.</p>
+
+        <form class="rp-partner-login__form" action="#" method="post">
+          <div class="rp-form__group">
+            <label for="partner-email" class="rp-form__label">Adresse email</label>
+            <input type="email" id="partner-email" name="email" class="rp-form__input" placeholder="votre@email.com" required autocomplete="email">
+          </div>
+          <div class="rp-form__group">
+            <label for="partner-password" class="rp-form__label">Mot de passe</label>
+            <input type="password" id="partner-password" name="password" class="rp-form__input" placeholder="Votre mot de passe" required autocomplete="current-password">
+          </div>
+          <div class="rp-form__group" style="display:flex;align-items:center;justify-content:space-between;font-size:14px;">
+            <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+              <input type="checkbox" name="remember" style="accent-color:var(--rp-green);">
+              Se souvenir de moi
+            </label>
+            <a href="#" style="color:var(--rp-green);font-weight:500;">Mot de passe oublié ?</a>
+          </div>
+          <div class="rp-form__group" style="margin-top:24px;">
+            <button type="submit" class="rp-btn rp-btn--primary" style="width:100%;">Se connecter</button>
+          </div>
+        </form>
+
+        <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--rp-gray-light);">
+          <p style="font-size:14px;color:var(--rp-gray);">Vous n'êtes pas encore partenaire Re-plug ?</p>
+          <a href="contact.html" class="rp-btn rp-btn--outline-dark rp-btn--small" style="margin-top:12px;">Devenir partenaire</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="rp-footer" role="contentinfo">
+    <div class="rp-footer__inner">
+      <div class="rp-footer__grid">
+        <div class="rp-footer__brand">
+          <img src="../images/logo-replug.png" alt="Re-plug" class="rp-footer__logo-img">
+          <p class="rp-footer__brand-text">Re-plug prolonge la vie des batteries. Réparation, reconditionnement et maintenance de batteries lithium-ion pour la mobilité électrique.</p>
+        </div>
+        <div>
+          <p class="rp-footer__col-title">Navigation</p>
+          <ul class="rp-footer__links">
+            <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+            <li><a href="notre-expertise.html">Notre expertise</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="rp-footer__col-title">Services</p>
+          <ul class="rp-footer__links">
+            <li><a href="trouver-un-reparateur.html">Trouver un réparateur</a></li>
+            <li><a href="#">Devenir partenaire</a></li>
+            <li><a href="espace-partenaire.html">Espace partenaires</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="rp-footer__col-title">Contact</p>
+          <ul class="rp-footer__links">
+            <li>Re-plug SAS</li>
+            <li>8, rue Lemercier</li>
+            <li>75017 Paris</li>
+            <li><a href="mailto:admin@re-plug.fr">admin@re-plug.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rp-footer__bottom">
+        <p class="rp-footer__copy">&copy; 2026 Re-plug SAS. Tous droits réservés.</p>
+        <ul class="rp-footer__legal-links">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="cgv-professionnels.html">CGV</a></li>
+          <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>
+          <li><a href="politique-de-cookies.html">Cookies</a></li>
+          <li><a href="politique-de-garantie.html">Garantie</a></li>
+          <li><a href="politique-de-livraison.html">Livraison et retour</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var burger = document.querySelector('.rp-header__burger');
+      var mobileNav = document.querySelector('.rp-mobile-nav');
+      if (burger && mobileNav) {
+        burger.addEventListener('click', function() {
+          mobileNav.classList.toggle('is-open');
+          burger.setAttribute('aria-expanded', mobileNav.classList.contains('is-open'));
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
