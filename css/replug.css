@@ -87,6 +87,27 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--rp-black);
 }
 
+/* --- Focus Visible (accessibility) --- */
+:focus-visible {
+  outline: 2px solid var(--rp-green);
+  outline-offset: 2px;
+}
+
+.rp-btn:focus-visible {
+  outline: 2px solid var(--rp-green);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(141, 198, 63, 0.25);
+}
+
+.rp-header__nav-link:focus-visible {
+  color: var(--rp-white);
+  outline-offset: 4px;
+}
+
+.rp-faq__question:focus-visible {
+  outline-offset: -2px;
+}
+
 /* --- Utility --- */
 .rp-container {
   max-width: var(--rp-container-width);
@@ -120,7 +141,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid transparent;
   cursor: pointer;
   transition: all var(--rp-transition);
-  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -275,11 +295,15 @@ h1, h2, h3, h4, h5, h6 {
 .rp-header__burger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .rp-header__burger span {
@@ -289,41 +313,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--rp-white);
   border-radius: 2px;
   transition: all var(--rp-transition);
-}
-
-/* Mobile nav overlay */
-.rp-mobile-nav {
-  display: none;
-  position: fixed;
-  top: 72px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--rp-dark);
-  z-index: 999;
-  padding: 32px 24px;
-  overflow-y: auto;
-}
-
-.rp-mobile-nav.is-open {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.rp-mobile-nav__link {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--rp-white);
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.rp-mobile-nav__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 24px;
 }
 
 /* --- Hero Section --- */
@@ -783,7 +772,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rp-faq__item.is-open .rp-faq__answer {
-  max-height: 500px;
+  max-height: 1000px;
   padding-bottom: 24px;
 }
 
@@ -906,6 +895,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--rp-gray-light);
   border-radius: var(--rp-radius-sm);
   transition: border-color var(--rp-transition), box-shadow var(--rp-transition);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -952,22 +943,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-.rp-blog__card-image {
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-
-.rp-blog__card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--rp-transition);
-}
-
-.rp-blog__card:hover .rp-blog__card-image img {
-  transform: scale(1.03);
-}
-
 .rp-blog__card-body {
   padding: 28px;
 }
@@ -1001,6 +976,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 740px;
   margin: 0 auto;
   padding: var(--rp-container-padding);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .rp-article__meta {
@@ -1014,6 +991,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--rp-dark);
   margin-bottom: 32px;
   line-height: 1.2;
+}
+
+.rp-article__lead {
+  font-size: 18px;
+  color: var(--rp-gray-dark);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.rp-article__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
 }
 
 .rp-article__content h2 {
@@ -1057,6 +1048,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--rp-container-padding);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .rp-legal__title {
@@ -1382,10 +1375,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--rp-gray-dark);
 }
 
-.rp-locator__map-note {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  color: var(--rp-gray) !important;
+.rp-locator__map-placeholder .rp-locator__map-note {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--rp-gray);
   max-width: 280px;
 }
 
@@ -1396,6 +1389,8 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 600px;
   overflow-y: auto;
   padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rp-gray-light) transparent;
 }
 
 .rp-locator__list::-webkit-scrollbar {
@@ -1547,7 +1542,10 @@ h1, h2, h3, h4, h5, h6 {
 .rp-page-hero--with-bg::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   background-image: inherit;
@@ -1889,7 +1887,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .rp-locator__filter-tag {
     font-size: 13px;
-    padding: 6px 12px;
+    padding: 10px 16px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .rp-locator__layout {

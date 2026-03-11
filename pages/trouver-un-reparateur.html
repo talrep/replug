@@ -15,8 +15,8 @@
 
   <header class="rp-header" role="banner">
     <div class="rp-header__inner">
-      <a href="../index.html" class="rp-header__logo"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img"></a>
-      <nav class="rp-header__nav">
+      <a href="../index.html" class="rp-header__logo" aria-label="Re-plug — Accueil"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img"></a>
+      <nav class="rp-header__nav" aria-label="Navigation principale">
         <a href="qui-sommes-nous.html" class="rp-header__nav-link">Qui sommes-nous</a>
         <a href="notre-expertise.html" class="rp-header__nav-link">Notre expertise</a>
         <a href="ressources.html" class="rp-header__nav-link">Ressources</a>
@@ -24,10 +24,10 @@
         <a href="contact.html" class="rp-header__nav-link">Contact</a>
       <a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__nav-cta">Trouver un réparateur</a></nav>
       <div class="rp-header__actions">
-        <a href="espace-partenaire.html" class="rp-header__partner-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Espace Partenaires</span></a>
+        <a href="espace-partenaire.html" class="rp-header__partner-link" aria-label="Espace Partenaires"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Espace Partenaires</span></a>
         <a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__cta">Trouver un réparateur</a>
       </div>
-      <button class="rp-header__burger"><span></span><span></span><span></span></button>
+      <button class="rp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -224,10 +224,6 @@
   <footer class="rp-footer" role="contentinfo"><div class="rp-footer__inner"><div class="rp-footer__grid"><div class="rp-footer__brand"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-footer__logo-img"><p class="rp-footer__brand-text">Re-plug prolonge la vie des batteries. Réparation, reconditionnement et maintenance de batteries lithium-ion pour la mobilité électrique.</p></div><div><p class="rp-footer__col-title">Navigation</p><ul class="rp-footer__links"><li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li><li><a href="notre-expertise.html">Notre expertise</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><p class="rp-footer__col-title">Services</p><ul class="rp-footer__links"><li><a href="trouver-un-reparateur.html">Trouver un réparateur</a></li><li><a href="contact.html">Devenir partenaire</a></li><li><a href="espace-partenaire.html">Espace partenaires</a></li></ul></div><div><p class="rp-footer__col-title">Contact</p><ul class="rp-footer__links"><li>Re-plug SAS</li><li>8, rue Lemercier, 75017 Paris</li><li><a href="mailto:admin@re-plug.fr">admin@re-plug.fr</a></li></ul></div></div><div class="rp-footer__bottom"><p class="rp-footer__copy">&copy; 2026 Re-plug SAS. Tous droits réservés.</p><ul class="rp-footer__legal-links"><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv-professionnels.html">CGV</a></li><li><a href="politique-de-confidentialite.html">Confidentialité</a></li><li><a href="politique-de-cookies.html">Cookies</a></li><li><a href="politique-de-garantie.html">Garantie</a></li><li><a href="politique-de-livraison.html">Livraison et retour</a></li></ul></div></div></footer>
 
   <script>
-    // Mobile nav
-    var b=document.querySelector('.rp-header__burger'),m=document.querySelector('.rp-mobile-nav');
-    if(b&&m) b.addEventListener('click',function(){m.classList.toggle('is-open');});
-
     (function(){
       var searchInput = document.querySelector('.rp-locator__search-input');
       var searchBtn   = document.querySelector('.rp-locator__search-btn');
@@ -309,7 +305,22 @@
         });
       });
     })();
-    document.querySelector('.rp-header__burger').addEventListener('click',function(){document.querySelector('.rp-header').classList.toggle('rp-header--open');});
+    document.querySelector('.rp-header__burger').addEventListener('click',function(){var h=document.querySelector('.rp-header');h.classList.toggle('rp-header--open');this.setAttribute('aria-expanded',h.classList.contains('rp-header--open'));});
   </script>
+
+<!-- Cookie Banner -->
+<div id="rp-cookie-banner" class="rp-cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="rp-cookie-banner__inner">
+    <p class="rp-cookie-banner__text">
+      Ce site utilise des cookies pour assurer son bon fonctionnement et analyser son audience.
+      En cliquant sur « Accepter », vous consentez au dépôt de cookies non essentiels.
+      <a href="politique-de-cookies.html">En savoir plus</a>.
+    </p>
+    <div class="rp-cookie-banner__actions">
+      <button class="rp-btn rp-btn--primary rp-btn--small" onclick="rpAcceptCookies()">Accepter</button>
+      <button class="rp-btn rp-btn--outline rp-btn--small" onclick="rpRefuseCookies()">Refuser</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

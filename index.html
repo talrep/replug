@@ -43,19 +43,6 @@
     </div>
   </header>
 
-  <!-- Mobile nav -->
-  <nav id="rp-mobile-nav" class="rp-mobile-nav" aria-label="Navigation mobile">
-    <a href="pages/qui-sommes-nous.html" class="rp-mobile-nav__link">Qui sommes-nous</a>
-    <a href="pages/notre-expertise.html" class="rp-mobile-nav__link">Notre expertise</a>
-    <a href="pages/ressources.html" class="rp-mobile-nav__link">Ressources</a>
-    <a href="pages/blog.html" class="rp-mobile-nav__link">Blog</a>
-    <a href="pages/contact.html" class="rp-mobile-nav__link">Contact</a>
-    <div class="rp-mobile-nav__actions">
-      <a href="pages/espace-partenaire.html" class="rp-btn rp-btn--outline">Espace Partenaires</a>
-      <a href="pages/trouver-un-reparateur.html" class="rp-btn rp-btn--primary">Trouver un réparateur</a>
-    </div>
-  <a href="pages/trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__nav-cta">Trouver un réparateur</a></nav>
-
   <!-- ============ MAIN ============ -->
   <main id="main-content" role="main">
 
@@ -235,7 +222,7 @@
 
   <script>
     /* Mobile Navigation */
-    document.querySelector('.rp-header__burger').addEventListener('click',function(){document.querySelector('.rp-header').classList.toggle('rp-header--open');});
+    document.querySelector('.rp-header__burger').addEventListener('click',function(){var h=document.querySelector('.rp-header');h.classList.toggle('rp-header--open');this.setAttribute('aria-expanded',h.classList.contains('rp-header--open'));});
 
     /* Cookie Consent */
     function rpAcceptCookies() {

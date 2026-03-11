@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de garantie — Re-plug</title>
+  <meta name="description" content="Politique de garantie commerciale Re-plug : conditions, durée, exclusions et procédure de réclamation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/replug.css">
 </head>
 <body>
 
+<a class="rp-sr-only" href="#main-content">Aller au contenu principal</a>
+
 <header class="rp-header" role="banner">
   <div class="rp-header__inner">
-    <a href="../index.html" class="rp-header__logo"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img"></a>
-    <nav class="rp-header__nav"><a href="qui-sommes-nous.html" class="rp-header__nav-link">Qui sommes-nous</a><a href="notre-expertise.html" class="rp-header__nav-link">Notre expertise</a><a href="ressources.html" class="rp-header__nav-link">Ressources</a><a href="blog.html" class="rp-header__nav-link">Blog</a><a href="contact.html" class="rp-header__nav-link">Contact</a><a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__nav-cta">Trouver un réparateur</a></nav>
-    <div class="rp-header__actions"><a href="espace-partenaire.html" class="rp-header__partner-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Espace Partenaires</span></a><a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__cta">Trouver un réparateur</a></div>
-    <button class="rp-header__burger"><span></span><span></span><span></span></button>
+    <a href="../index.html" class="rp-header__logo" aria-label="Re-plug — Accueil"><img src="../images/logo-replug.png" alt="Re-plug" class="rp-header__logo-img"></a>
+    <nav class="rp-header__nav" aria-label="Navigation principale"><a href="qui-sommes-nous.html" class="rp-header__nav-link">Qui sommes-nous</a><a href="notre-expertise.html" class="rp-header__nav-link">Notre expertise</a><a href="ressources.html" class="rp-header__nav-link">Ressources</a><a href="blog.html" class="rp-header__nav-link">Blog</a><a href="contact.html" class="rp-header__nav-link">Contact</a><a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__nav-cta">Trouver un réparateur</a></nav>
+    <div class="rp-header__actions"><a href="espace-partenaire.html" class="rp-header__partner-link" aria-label="Espace Partenaires"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Espace Partenaires</span></a><a href="trouver-un-reparateur.html" class="rp-btn rp-btn--primary rp-header__cta">Trouver un réparateur</a></div>
+    <button class="rp-header__burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main class="rp-legal">
+<main id="main-content" class="rp-legal">
   <div class="rp-legal__inner">
     <h1 class="rp-legal__title">Politique de garantie commerciale Re-plug</h1>
     <p class="rp-legal__date">Dernière mise à jour : mars 2026</p>
@@ -139,10 +142,42 @@
   </div>
 </footer>
 
+<!-- Cookie Banner -->
+<div id="rp-cookie-banner" class="rp-cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="rp-cookie-banner__inner">
+    <p class="rp-cookie-banner__text">
+      Ce site utilise des cookies pour assurer son bon fonctionnement et analyser son audience.
+      En cliquant sur « Accepter », vous consentez au dépôt de cookies non essentiels.
+      <a href="politique-de-cookies.html">En savoir plus</a>.
+    </p>
+    <div class="rp-cookie-banner__actions">
+      <button class="rp-btn rp-btn--primary rp-btn--small" onclick="rpAcceptCookies()">Accepter</button>
+      <button class="rp-btn rp-btn--outline rp-btn--small" onclick="rpRefuseCookies()">Refuser</button>
+    </div>
+  </div>
+</div>
+
 <script>
   document.querySelector('.rp-header__burger').addEventListener('click', function () {
-    document.querySelector('.rp-header').classList.toggle('rp-header--open');
+    var h = document.querySelector('.rp-header');
+    h.classList.toggle('rp-header--open');
+    this.setAttribute('aria-expanded', h.classList.contains('rp-header--open'));
   });
+
+  /* Cookie Consent */
+  function rpAcceptCookies() {
+    localStorage.setItem('rp_cookies', 'accepted');
+    document.getElementById('rp-cookie-banner').classList.remove('is-visible');
+  }
+  function rpRefuseCookies() {
+    localStorage.setItem('rp_cookies', 'refused');
+    document.getElementById('rp-cookie-banner').classList.remove('is-visible');
+  }
+  (function() {
+    if (!localStorage.getItem('rp_cookies')) {
+      document.getElementById('rp-cookie-banner').classList.add('is-visible');
+    }
+  })();
 </script>
 </body>
 </html>
